@@ -1,0 +1,10 @@
+libraries required
+Flask
+numpy (np)
+cv2 (cv)
+mediapipe (mp)
+math
+time
+statistics
+pyaudio
+wave
