@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='interview.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>InterviewEase</title>
+</head>
+<body>
+    <header class="header">
+		<h1 class="logo"><a href="{{ url_for('index') }}">InterviewEase</a></h1>
+      <ul class="main-nav">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('startInterview') }}">Start Interview</a></li>
+          <li><a href="#">Dashboard</a></li>
+      </ul>
+	</header>
+    <h1 style="margin-left: 45%;">
+        INSTRUCTIONS
+    </h1>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos laboriosam pariatur eos error voluptates, consectetur accusamus dolorem quis veniam nostrum neque modi dolore, perspiciatis officia ad cum quia atque quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero quae eaque voluptatibus mollitia rem et, nostrum perspiciatis natus, aspernatur in magni non consequuntur quis nesciunt voluptatum nemo quisquam amet? Ipsum!
+    </div>
+    <br>
+    <div id="video_container">
+        <img id="video_feed" src="{{ url_for('video_feedImage') }}">
+    </div>
+    <br>
+    
+    <div id="button_container">
+        <button class="btn btn-transparent-lblue" id="start_buttonImg">Start Webcam</button>
+        
+
+
+        <button class="btn btn-transparent-lblue" id="Capture">Capture Frame</button>
+
+        <a href="{{ url_for('interviewQuestion') }}" class="btn btn-transparent-lblue">Start Interview</a>
+    </div>
+    
+    
+    
+
+    <script>
+        document.getElementById('start_buttonImg').addEventListener('click', function() {
+    fetch('/start_camera')
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
+            var video = document.getElementById('video_feed');
+            video.style.display = 'block';
+            video.src = '/video_feedImage';
+        });
+});
+
+document.getElementById('Capture').addEventListener('click', function() {
+   fetch('/capture_frame')
+   .then(response => response.text())
+   .then(data => {
+       console.log(data);
+       var video = document.getElementById('video_feed');
+       video.style.display = 'none';
+       video.src = '';
+   });
+});
+    </script>
+
+
+</body>
+</html> 

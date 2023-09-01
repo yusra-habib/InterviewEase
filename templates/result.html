@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>InterviewEase</title>
+</head>
+<body>
+    <header class="header">
+		<h1 class="logo"><a href="{{ url_for('index') }}">InterviewEase</a></h1>
+      <ul class="main-nav">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('startInterview') }}">Start Interview</a></li>
+          <li><a href="#">Dashboard</a></li>
+      </ul>
+	</header> 
+    <div style="margin-top: 10%;margin-left: 35%;">
+
+        <h1 style="font-size: 60px;">Result </h1>
+        <div style="font-size: 40px;">
+            Confidence Level: {{ ConfidenceLevel }}
+        </div>
+        <div style="font-size: 40px;">
+            Confident Score: {{ confidentScore }}
+        </div>
+
+    </div>
+
+</body>
+</html>

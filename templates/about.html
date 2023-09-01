@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>InterviewEase</title>
+
+    <style>
+        /* CSS for contact cards */
+        .contact-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 3%;
+            margin-left: 40%;
+            width: 300px;
+            height: 100px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #040E5B;
+            border-radius: 5px;
+        }
+
+        .contact-card h2 {
+            font-size: 1.2rem;
+            margin: 0;
+            
+        }
+
+        .contact-card p {
+            margin: 0;
+            color: white;
+        }
+
+
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .contact-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+		<h1 class="logo"><a href="{{ url_for('index') }}">InterviewEase</a></h1>
+      <ul class="main-nav">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('startInterview') }}">Start Interview</a></li>
+          <li><a href="#">Dashboard</a></li>
+      </ul>
+	</header>
+    <div class="group">
+        <div class="contact-card">
+            <h2>Yusra Habib
+            </h2>
+            <p>Email: yusrahabib2019@gmail.com</p>
+        </div>
+        <div class="contact-card">
+            <h2>Labiqa Siddiqui 
+            </h2>
+            <p>Email: labiqa2002@gmail.com</p>
+        </div>
+        <div class="contact-card">
+            <h2>Aiman Javed
+            </h2>
+            <p>Email: aimanjavaid121@gmail.com</p>
+        </div>
+        <div class="contact-card">
+            <h2>Eesha Akram
+            </h2>
+            <p>Email: eeshaakram11@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html> 

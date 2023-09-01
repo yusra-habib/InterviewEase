@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>InterviewEase</title>
+</head>
+<body>
+    <header class="header">
+		<h1 class="logo"><a href="{{ url_for('index') }}">InterviewEase</a></h1>
+      <ul class="main-nav">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('startInterview') }}">Start Interview</a></li>
+      </ul>
+	</header> 
+    <div class="landingcontainer">
+        <div class="landingtext">
+            <div class="landingwelcomeText" >
+                Automated Interview Analysis of Candidates
+            </div>
+            <h3 style="color: #093459;" >
+                This project aims to develop an automated interview analysis system that uses audio and visual inputs to evaluate candidates based on their behavior, frequency, and pitch of voice by leveraging machine learning techniques.            </h3>
+        </div>
+        <div class="landingimage">
+            <div class="landingimage-circle">
+                <img src="..\static\face.png" alt="Image">
+            </div>
+        </div>
+    </div>
+    
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/wB9eMrhsiPg?si=ExIMeVxZYun7l17L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe> -->
+</body>
+</html> 
+
+
+<!-- <!DOCTYPE html>
+ <html>
+ <head>
+     <title>Flask OpenCV Webcam</title>
+     <style>
+         body {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             min-height: 100vh;
+             margin: 0;
+             font-family: Arial, sans-serif;
+         }
+ 
+         h1, h2 {
+             margin: 0;
+         }
+ 
+         #start_button {
+             margin-bottom: 10px;
+         }
+ 
+         #video_container {
+             position: relative;
+             width: 640px; /* Adjust width as needed */
+             height: 480px; /* Adjust height as needed */
+             overflow: hidden;
+         }
+ 
+         #video_feed {
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             width: 100%;
+             height: auto;
+             display: none;
+         }
+     </style>
+ </head>
+ <body>
+     <button id="start_button">Start Webcam</button>
+     <button id="stop_button">Stop Webcam</button>
+     <br>
+     <div id="video_container">
+         <img id="video_feed" src="">
+     </div>
+ 
+     <script>
+         document.getElementById('start_button').addEventListener('click', function() {
+             fetch('/start_camera')
+                 .then(response => response.text())
+                 .then(data => {
+                     console.log(data);
+                     var video = document.getElementById('video_feed');
+                     video.style.display = 'block';
+                     video.src = '/video_feed';
+                 });
+         });
+
+         document.getElementById('stop_button').addEventListener('click', function() {
+            fetch('/stop_camera')
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                var video = document.getElementById('video_feed');
+                video.style.display = 'none';
+                video.src = '';
+            });
+    });
+     </script>
+ </body>
+ </html>
+  
+
+ -->

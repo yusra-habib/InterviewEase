@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='interview.css') }}">
+    <title>InterviewEase</title>
+</head>
+<body>
+    <br>
+    <div>
+        <div id="video_container">
+            <img id="video_feed" src="{{ url_for('video_feed') }}">
+        </div>
+
+        <div id="img_container">
+            <img id="video_feed" src="{{ url_for('video_feed') }}">
+        </div>
+
+    </div>
+    
+    <br>
+
+    
+    <div id="button_container">
+        <button class="btn btn-transparent-lblue" id="start_button">Start Webcam</button>
+        <button class="btn btn-transparent-lblue" id="stop_button">Stop Webcam</button>
+        <a href="{{ url_for('interviewQuestion') }}" class="btn btn-transparent-lblue">Answer next question</a>
+    </div>
+    
+    
+    
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
+
+
